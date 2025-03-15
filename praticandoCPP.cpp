@@ -42,10 +42,15 @@ int main()
 	cout << "quem está atrás: " << carros.back() << "\n\n";
 
 
-	list <int> numeros;
+	list <int> numeros, numerosMergidos;
 	int tamanho;
 	tamanho = 10;
 	list <int>::iterator it;
+
+	numerosMergidos.push_front(1);
+	numerosMergidos.push_front(1);
+	numerosMergidos.push_front(1);
+	numerosMergidos.push_front(1);
 
 	for (int i = 0; i < tamanho; i++) {
 		numeros.push_back(i);
@@ -54,6 +59,13 @@ int main()
 	it = numeros.begin();
 	advance(it, 5);
 	numeros.insert(it, 0);
+
+	// apagando elementos
+	numeros.erase(--it); // volta 1 pra apagar o correto
+
+	numeros.clear(); // limpa tudo
+
+	numeros.merge(numerosMergidos);
 
 	cout << "tamanho lista: " << numeros.size() << "\n";
 
