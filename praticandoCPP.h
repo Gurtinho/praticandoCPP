@@ -9,3 +9,4 @@
 #include <stack> // Biblioteca pilhas
 #include <queue> // Biblioteca filas
 
+#include <list> // Biblioteca para listas
